@@ -1,0 +1,4 @@
+<canvas id="c"></canvas>
+<script>
+    document.getElementById("c").getContext("2d").fillRect(0,0,50,50);
+</script>
