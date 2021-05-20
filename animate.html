@@ -1,0 +1,13 @@
+<canvas id='c'></canvas>
+<script>
+var c  = document.getElementById('c').getContext('2d')
+var x = 0
+
+function animate(){
+    c.clearRect(0,0,300,150)
+    c.fillRect(x,0,50,50);
+    x = x + 1
+    requestAnimationFrame(animate)
+}
+  animate()
+</script>
