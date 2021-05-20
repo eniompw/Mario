@@ -1,4 +1,4 @@
-# Mario in 5 Steps
+# JS Mario in 5 Steps
 
 
 1. [Black Rectangle](https://github.com/eniompw/mario/blob/main/01-first.html)
