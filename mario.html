@@ -1,0 +1,37 @@
+<canvas id="c" width="600" height="300"></canvas>
+<script>
+    var canvas = document.querySelector('#c')
+    var c = canvas.getContext('2d')
+    var pipe = new Image()
+    pipe.src = 'https://static.wikia.nocookie.net/mariokart/images/d/d4/Warp_Pipe.png'
+    var mario = new Image()
+    mario.src = 'https://mario.wiki.gallery/images/thumb/c/cc/NSMBUD_Mariojump.png/1200px-NSMBUD_Mariojump.png'
+    var pipex = 650
+    var marioy = 50
+
+    function animate(){
+        c.fillStyle = 'skyblue'
+        c.fillRect(0, 0, 600, 300)
+        c.fillStyle = 'brown'
+        c.fillRect(0, 250, 600, 50)
+        c.drawImage(pipe, pipex, 194, 40, 56)
+        pipex = pipex - 1
+        if (pipex == -60) pipex = 650
+        c.drawImage(mario, 200, marioy, 60, 75)
+        if (marioy < 175)   marioy = marioy + 1
+        if (pipex == 260 && marioy == 175)
+        {
+            c.font = '30px Arial';
+            c.fillText('Game Over!', 200, 100);
+        }
+        else
+        {
+            requestAnimationFrame(animate)
+        }
+    }
+    requestAnimationFrame(animate)
+
+    canvas.onclick = function() {
+        marioy = marioy - 50
+    }
+</script>
