@@ -1,0 +1,9 @@
+<canvas id=c></canvas>
+<script>
+    var c = document.getElementById('c').getContext('2d')
+    var w = window.innerWidth
+    var h = window.innerHeight
+    c.canvas.width = w
+    c.canvas.height = h
+    c.fillRect(w/2-w/4,h/2-h/4,w/4,h/4)
+</script>
